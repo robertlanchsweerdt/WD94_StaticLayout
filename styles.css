@@ -9,7 +9,9 @@
     #1a1a1a 95%
   );
   --clr-gray-900: rgba(26, 26, 26, 0.9);
-  --clr-gray-700: #343434;
+  --clr-gray-800: #242424;
+  --clr-gray-700: #7a7a7a;
+  --clr-gray-600: #343434;
   --clr-gray-500: #999;
   --clr-gry-font: #aaa;
   --clr-gray-300: #ccc;
@@ -78,13 +80,14 @@ body {
 }
 
 #kids-icon {
-  border-left: solid 0.5px var(--clr-gray-500);
+  border-left: solid 1px var(--clr-gray-700);
 }
 
 #kids-icon svg {
-  background-color: var(--clr-gray-500);
-  height: 20px;
-  padding: 5px 10px;
+  background-color: var(--clr-gray-700);
+  height: auto;
+  width: 45px;
+  padding: 4px 7px;
   border-radius: 15px;
   margin-left: 1rem;
 }
@@ -97,30 +100,63 @@ body {
   background-color: var(--clr-gray-300);
 }
 
+/* HEADER LOGO */
+
+.header__logo {
+  width: 203px;
+  height: 88px;
+}
+
+.header__logo img {
+  max-width: 100%;
+}
+
+/* SEARCH */
+
+.header__search-login input {
+  position: relative;
+  width: 248px;
+  height: 40px;
+  padding-left: 1em;
+
+  font-size: 1rem;
+
+  background-color: var(--clr-gray-800);
+  color: var(--clr-gray-700);
+  border: none;
+  border-radius: 5px;
+}
+
+#search-btn {
+  position: absolute;
+  top: 1.8rem;
+  right: 3rem;
+  width: 20px;
+  cursor: pointer;
+}
+
+#search-btn #Icon-Search {
+  fill: var(--clr-gray-700);
+}
+
+.header__search-login input:focus {
+  color: white;
+}
+
 /* LOGIN SIGN UP */
 
 .login-wrapper {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+}
+
+.login-wrapper p {
+  font-size: 0.875rem;
+  letter-spacing: 2px;
 }
 
 .login-wrapper span {
+  color: var(--clr-gray-800);
   margin: 0 1em;
-}
-
-.header__search-login input {
-  width: 248px;
-  height: 40px;
-  padding-left: 1em;
-
-  font-size: 1.25rem;
-
-  background-color: var(--clr-gray-700);
-  color: var(--clr-gray-500);
-  border: none;
-  border-radius: 5px;
-}
-
-.header__search-login input:focus {
-  color: white;
 }
