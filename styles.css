@@ -130,7 +130,7 @@ body {
 #search-btn {
   position: absolute;
   top: 1.8rem;
-  right: 3rem;
+  right: 2.2rem;
   width: 20px;
   cursor: pointer;
 }
@@ -152,11 +152,55 @@ body {
 }
 
 .login-wrapper p {
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   letter-spacing: 2px;
 }
 
 .login-wrapper span {
   color: var(--clr-gray-800);
   margin: 0 1em;
+}
+
+/* HEADER NAVIGATION */
+
+.menu-list {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item,
+.blank {
+  list-style-type: none;
+  border: solid 0.2px var(--clr-gray-800);
+}
+
+.blank:first-child {
+  border-left: none;
+}
+
+.blank:last-child {
+  border-right: none;
+}
+
+.blank {
+  flex: 1;
+}
+
+.menu-item {
+  text-align: center;
+  padding: 0.7em 1.5em;
+}
+
+.menu-item a {
+  color: var(--clr-gry-font);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.menu-item a:hover {
+  color: white;
 }
