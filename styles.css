@@ -1,0 +1,126 @@
+/* VARIABLES */
+:root {
+  --clr-black-900: #000000;
+  --clr-black-700: #151515;
+
+  --clr-gray-gradient: linear-gradient(
+    to bottom,
+    rgba(26, 26, 26, 0.75) 0%,
+    #1a1a1a 95%
+  );
+  --clr-gray-900: rgba(26, 26, 26, 0.9);
+  --clr-gray-700: #343434;
+  --clr-gray-500: #999;
+  --clr-gry-font: #aaa;
+  --clr-gray-300: #ccc;
+  --clr-blue: #438ad7;
+
+  --clr-orange: #c5631b;
+  --clr-orange-gradient: linear-gradient(#c5631b, #b65c19);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--clr-black-900);
+
+  font-family: Helvetica, Arial, sans-serif;
+  color: var(--clr-gry-font);
+  font-weight: 600;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: min(1400px, 95%);
+  margin: 0 auto;
+  padding: 1.25rem 0;
+  background-image: url('./assets/navigation_stars.jpg');
+}
+
+.page-wrapper {
+  width: min(1600px, 95%);
+}
+
+/* header social media icons */
+
+.header__social-icons {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  height: 30px;
+}
+
+.social-icon {
+  margin-right: 1.25em;
+
+  list-style-type: none;
+  height: 20px;
+  width: 20px;
+}
+
+.social-icon:hover .social-icon-svg {
+  fill: var(--clr-gray-300);
+}
+
+#youtube-icon {
+  width: 26px;
+}
+
+#twitter-icon {
+  width: 23px;
+}
+
+#kids-icon {
+  border-left: solid 0.5px var(--clr-gray-500);
+}
+
+#kids-icon svg {
+  background-color: var(--clr-gray-500);
+  height: 20px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin-left: 1rem;
+}
+
+#kids-icon:hover #Icon-Social-Kids {
+  fill: unset;
+}
+
+#kids-icon:hover svg {
+  background-color: var(--clr-gray-300);
+}
+
+/* LOGIN SIGN UP */
+
+.login-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.login-wrapper span {
+  margin: 0 1em;
+}
+
+.header__search-login input {
+  width: 248px;
+  height: 40px;
+  padding-left: 1em;
+
+  font-size: 1.25rem;
+
+  background-color: var(--clr-gray-700);
+  color: var(--clr-gray-500);
+  border: none;
+  border-radius: 5px;
+}
+
+.header__search-login input:focus {
+  color: white;
+}
