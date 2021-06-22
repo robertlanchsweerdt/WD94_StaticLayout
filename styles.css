@@ -117,8 +117,26 @@ header {
   margin-top: 190px;
 }
 
+.btn-video {
+  height: 72px;
+  width: 72px;
+
+  background-image: url('./assets/video-arrow.svg');
+  background-color: var(--clr-red-600);
+  background-size: 20px 22px;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+  border-radius: 20px 4px 20px;
+}
+
+.btn-video svg {
+  height: 30px;
+  width: 30px;
+}
+
 .btn {
-  padding: 0.8em 2.3em;
+  display: inline-block;
+  padding: 0.7em 1em;
   border-radius: 3px;
   font-size: 0.9rem;
   transition: background-color 300ms ease;
@@ -355,15 +373,15 @@ header {
 
 .hero__buttons {
   display: grid;
-  grid-template-columns: repeat(2, 200px);
+  grid-template-columns: repeat(2, 180px);
   place-content: center;
   gap: 0.8em;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1240px) {
   .hero__buttons {
     grid-template-columns: 1fr;
-    width: 200px;
+    width: 180px;
     margin: 0 auto;
   }
 }
