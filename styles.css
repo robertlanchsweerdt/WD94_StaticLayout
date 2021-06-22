@@ -40,6 +40,8 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   color: var(--clr-gry-font);
   font-weight: 600;
+
+  scroll-behavior: smooth;
 }
 
 img {
@@ -347,7 +349,7 @@ header {
 }
 
 .hero__title-wrapper img {
-  width: 400px;
+  width: min(400px, 100%);
   margin: 0 auto;
 }
 
@@ -356,6 +358,14 @@ header {
   grid-template-columns: repeat(2, 200px);
   place-content: center;
   gap: 0.8em;
+}
+
+@media (max-width: 1280px) {
+  .hero__buttons {
+    grid-template-columns: 1fr;
+    width: 200px;
+    margin: 0 auto;
+  }
 }
 
 /* SLIDER NAVIGATION */
