@@ -68,6 +68,16 @@ a {
   text-transform: uppercase;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+
+  background-color: var(--clr-black-900);
+}
+
 .header__wrapper {
   display: flex;
   justify-content: space-between;
@@ -102,6 +112,7 @@ a {
   text-align: center;
   font-size: 0.85rem;
   color: var(--clr-gray-600);
+  margin-top: 190px;
 }
 
 .btn {
