@@ -71,14 +71,30 @@ a {
 .header__wrapper {
   display: flex;
   justify-content: space-between;
-  width: min(1400px, 95%);
+  width: min(1400px, 97%);
   margin: 0 auto;
   padding: 1.25rem 0;
   background-image: url('./assets/navigation_stars.jpg');
 }
 
 .page-wrapper {
-  width: min(1600px, 95%);
+  width: min(1600px, 100%);
+  margin: 0 auto;
+
+  /* parallax effect */
+  background-image: url('./assets/background-stars-desktop_00cbf8a9.jpeg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.section-container {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .copy-message {
@@ -395,4 +411,11 @@ a {
   position: relative;
   z-index: 1;
   font-size: 0.875rem;
+}
+
+/**** SECTION ****/
+/**** BAD BATCH ****/
+
+.page-wrapper {
+  outline: solid 1px blue;
 }
