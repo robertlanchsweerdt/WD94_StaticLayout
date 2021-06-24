@@ -29,6 +29,12 @@
   --clr-red-opacity-hover: rgba(213, 0, 50, 0.6);
 }
 
+/**
+
+UNIVERSAL SETTINGS
+
+*/
+
 * {
   box-sizing: border-box;
 }
@@ -104,12 +110,57 @@ header {
   min-height: 100vh;
 }
 
-.section-container {
-  position: relative;
+.page-section {
   width: min(1200px, 100%);
   margin: 0 auto;
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.container-relative {
+  position: relative;
+}
+
+.layout-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  width: 85%;
+  height: 89%;
+
+  overflow: hidden;
+
+  outline: solid 1px red;
+}
+
+.title-block {
+  display: block;
+
+  margin-bottom: 1em;
+
+  max-width: 36%;
+  height: auto;
+
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--clr-white);
+}
+
+.inner-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem 1rem;
+
+  outline: solid 2px yellow;
+  width: 85%;
+  margin: 0 auto;
 }
 
 .copy-message {
@@ -119,6 +170,34 @@ header {
   color: var(--clr-gray-600);
   margin-top: 190px;
 }
+
+.card-horizontal {
+  display: flex;
+  width: 512px;
+  height: 150px;
+
+  outline: solid 2px blue;
+}
+
+.card-horizontal img {
+  background-size: contain;
+  width: auto;
+  height: 100%;
+}
+
+.card-horizontal__copy {
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  background-color: rgba(26, 26, 26, 0.9);
+}
+
+/**
+
+BUTTONS
+
+*/
 
 .btn-video {
   position: relative;
@@ -151,7 +230,7 @@ header {
 
 .btn {
   display: inline-block;
-  padding: 0.7em 1em;
+  padding: 0.7em 2em;
   border-radius: 3px;
   font-size: 0.9rem;
   transition: background-color 300ms ease;
@@ -181,7 +260,11 @@ header {
   background-color: var(--clr-gray-900);
 }
 
-/* header social media icons */
+/**
+
+HEADER:  SOCIAL ICONS
+
+*/
 
 .header__social-icons {
   display: flex;
@@ -231,7 +314,11 @@ header {
   background-color: var(--clr-gray-300);
 }
 
-/* HEADER LOGO */
+/**
+
+HEADER LOGO
+
+*/
 
 .header__logo {
   width: 203px;
@@ -242,7 +329,11 @@ header {
   max-width: 100%;
 }
 
-/* SEARCH */
+/**
+
+SEARCH INPUT
+
+*/
 
 .header__search-login input {
   position: relative;
@@ -274,7 +365,11 @@ header {
   color: white;
 }
 
-/* LOGIN SIGN UP */
+/**
+
+LOGIN AND SIGN UP
+
+*/
 
 .login-wrapper {
   display: flex;
@@ -298,7 +393,11 @@ header {
   margin: 0 1em;
 }
 
-/* HEADER NAVIGATION */
+/**
+
+NAVIGATION
+
+*/
 
 .menu-list {
   display: flex;
@@ -339,47 +438,28 @@ header {
   color: white;
 }
 
-/* HERO HEADER */
+/**
 
-.hero-wrapper {
+SECTION:  HERO
+
+*/
+
+#hero {
   position: relative;
   width: 100%;
   height: auto;
-
-  z-index: 1;
 }
 
-.overlay__right,
-.overlay__left {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+#hero .logo-img {
+  width: 95%;
+}
 
-  transform: translate(-50%, -50%);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-
-  width: 90%;
+#hero .layout-overlay {
   height: 100%;
-
-  overflow: hidden;
 }
 
-.hero__title-wrapper {
+#hero .title-block {
   align-self: flex-end;
-
-  display: block;
-
-  margin-bottom: 1em;
-
-  max-width: 36%;
-  height: auto;
-
-  text-align: center;
-  font-size: 1.2rem;
-  color: var(--clr-white);
 }
 
 .hero__title-wrapper img {
@@ -387,15 +467,11 @@ header {
   margin: 0 auto;
 }
 
-@media (max-width: 1240px) {
-  .hero__buttons {
-    grid-template-columns: 1fr;
-    width: 180px;
-    margin: 0 auto;
-  }
-}
+/**
 
-/* SLIDER NAVIGATION */
+SLIDER NAVIGATION
+
+*/
 
 .hero__slider-navigation-list {
   display: grid;
@@ -461,24 +537,22 @@ header {
   font-size: 0.875rem;
 }
 
-/**** SECTION ****/
-/**** BAD BATCH ****/
+/**
 
-.page-wrapper {
-  outline: solid 1px blue;
+SECTION:  BAD BATCH
+
+*/
+
+#section__bad-batch .logo-img {
+  width: 90%;
 }
 
-.overlay__left {
-  top: 0;
-  left: -8%;
-}
-
-.overlay__left p {
+#section__bad-batch .title-block {
   text-align: left;
 }
 
-.overlay__left .dual-buttons__container {
-  place-content: start;
+#section__bad-batch .dual-buttons__container {
+  place-content: flex-start;
 }
 
 #bad-batch__section-orange {
@@ -486,5 +560,18 @@ header {
   grid-template-columns: repeat(2, 1fr);
   place-content: center;
 
+  margin-top: -10%;
+  padding: 0 3rem;
+
+  background-color: var(--clr-orange);
+}
+
+/**
+
+SECTION:  BAD BATCH LOWER
+
+*/
+
+#section__bad-batch-lower {
   background-color: var(--clr-orange);
 }
