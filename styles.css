@@ -163,34 +163,133 @@ header {
   margin: 0 auto;
 }
 
-.copy-message {
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 0.85rem;
-  color: var(--clr-gray-600);
-  margin-top: 190px;
-}
-
 .card-horizontal {
   display: flex;
   width: 512px;
   height: 150px;
+  cursor: pointer;
+}
 
-  outline: solid 2px blue;
+.card-horizontal:hover > div img {
+  transform: scale(1.1);
+}
+
+.card-horizontal:hover .card-inner::before,
+.card-horizontal:hover .card-inner::after {
+  background-color: var(--clr-white);
+  /* border-color: var(--clr-white); */
+  box-shadow: 3px 1px 6px 2px #ccc;
+}
+
+.card__img-wrapper {
+  height: 164px;
+  width: 500px;
+  overflow: hidden;
 }
 
 .card-horizontal img {
-  background-size: contain;
-  width: auto;
+  background-size: cover;
   height: 100%;
+  width: auto;
+
+  transition: transform 300ms ease-in;
 }
 
-.card-horizontal__copy {
+.card-inner {
   position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-right: 1em;
+  padding-left: 1em;
+
   height: 100%;
   width: 100%;
 
   background-color: rgba(26, 26, 26, 0.9);
+}
+
+.card-inner::before,
+.card-inner::after {
+  position: absolute;
+  content: '';
+
+  top: 1.3rem;
+  height: 3px;
+
+  background-color: var(--clr-gray-700);
+  transition: transform 300ms ease-in;
+}
+
+.card-inner::before {
+  left: 1rem;
+  width: 15px;
+}
+
+.card-inner::after {
+  left: 2.3rem;
+  width: 5px;
+}
+
+.card-inner p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.card-top,
+.card-bottom {
+  position: relative;
+  height: 7px;
+  width: 100%;
+}
+
+.card-top::before,
+.card-top::after,
+.card-bottom::before,
+.card-bottom::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  bottom: 0;
+}
+
+.card-top::before,
+.card-top::after {
+  border-bottom: solid 7px rgba(26, 26, 26, 0.9);
+}
+
+.card-bottom::before,
+.card-bottom::after {
+  border-top: solid 7px rgba(26, 26, 26, 0.9);
+}
+
+.card-top::before {
+  left: 0;
+  border-right: solid 7px transparent;
+  width: 40%;
+}
+
+.card-top::after {
+  right: 0;
+  border-left: solid 7px transparent;
+  width: 20%;
+}
+
+.card-bottom::before {
+  left: 0;
+  border-right: solid 7px transparent;
+  width: 60%;
+}
+
+.copy-message {
+  margin-top: 190px;
+
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--clr-gray-600);
 }
 
 /**
@@ -577,4 +676,9 @@ SECTION:  BAD BATCH LOWER
 
 #section__bad-batch-lower {
   background-color: var(--clr-orange);
+}
+
+.bad-batch__grid {
+  position: relative;
+  top: -150px;
 }
