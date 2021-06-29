@@ -4,6 +4,7 @@
   --clr-black-700: #151515;
   --clr-white: #ffffff;
 
+  --clr-gray-990: #1a1a1a;
   --clr-gray-900: rgba(26, 26, 26, 0.9);
   --clr-gray-800: #242424;
   --clr-gray-700: #343434;
@@ -136,8 +137,6 @@ header {
   height: 89%;
 
   overflow: hidden;
-
-  outline: solid 1px red;
 }
 
 .title-block {
@@ -156,9 +155,8 @@ header {
 .inner-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem 1rem;
+  gap: 3rem 1rem;
 
-  outline: solid 2px yellow;
   width: 85%;
   margin: 0 auto;
 }
@@ -167,6 +165,10 @@ header {
   display: flex;
   width: 512px;
   height: 150px;
+}
+
+.card-horizontal,
+.card-box {
   cursor: pointer;
 }
 
@@ -175,9 +177,10 @@ header {
 }
 
 .card-horizontal:hover .card-inner::before,
-.card-horizontal:hover .card-inner::after {
+.card-horizontal:hover .card-inner::after,
+.card-box:hover .card-inner::before,
+.card-box:hover .card-inner::after {
   background-color: var(--clr-white);
-  /* border-color: var(--clr-white); */
   box-shadow: 3px 1px 6px 2px #ccc;
 }
 
@@ -199,11 +202,10 @@ header {
   position: relative;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
 
-  padding-right: 1em;
-  padding-left: 1em;
+  padding: 2em 1em;
 
   height: 100%;
   width: 100%;
@@ -219,7 +221,7 @@ header {
   top: 1.3rem;
   height: 3px;
 
-  background-color: var(--clr-gray-700);
+  background-color: var(--clr-gray-600);
   transition: transform 300ms ease-in;
 }
 
@@ -283,6 +285,16 @@ header {
   width: 60%;
 }
 
+.card-box .card-bottom::before {
+  width: 70%;
+}
+
+.card-box .card-bottom::after {
+  right: 0;
+  border-left: solid 7px transparent;
+  width: 7%;
+}
+
 .copy-message {
   margin-top: 190px;
 
@@ -298,8 +310,15 @@ BUTTONS
 
 */
 
-.btn-video {
+.video-wrapper {
   position: relative;
+}
+
+.btn-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   height: 72px;
   width: 72px;
@@ -312,6 +331,7 @@ BUTTONS
   border: none;
   border-radius: 20px 4px 20px;
 
+  transition: background-color 200ms ease-in;
   cursor: pointer;
 }
 
@@ -675,10 +695,22 @@ SECTION:  BAD BATCH LOWER
 */
 
 #section__bad-batch-lower {
+  height: 680px;
   background-color: var(--clr-orange);
 }
 
 .bad-batch__grid {
   position: relative;
   top: -150px;
+}
+
+/**
+
+SECTION:  HIGH REPUBLIC SECTION
+
+*/
+
+#section__high-republic-lower {
+  height: 680px;
+  background-color: var(--clr-blue);
 }
