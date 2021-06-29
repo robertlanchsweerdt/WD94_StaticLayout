@@ -307,6 +307,10 @@ header {
   width: 60%;
 }
 
+.card-box {
+  position: relative;
+}
+
 .card-box .card-bottom::before {
   width: 70%;
 }
@@ -418,6 +422,39 @@ BUTTONS
 #btn-clear:hover {
   background-color: var(--clr-gray-900);
   opacity: 0.9;
+}
+
+.slide-left,
+.slide-right {
+  position: absolute;
+  top: 50%;
+
+  width: 40px;
+  height: 40px;
+}
+
+.slide-left svg,
+.slide-right svg {
+  height: 100%;
+  width: 100%;
+
+  padding: 10px;
+
+  background-color: var(--clr-gray-900);
+  opacity: 0.8;
+}
+
+.slide-left {
+  left: 1%;
+}
+
+.slide-right {
+  right: 1%;
+  transform: rotate(180deg);
+}
+
+.card-box .slide-right {
+  right: -3%;
 }
 
 /**
@@ -766,7 +803,7 @@ SECTION:  HIGH REPUBLIC SECTION
 */
 
 #section__high-republic-lower {
-  height: 780px;
+  height: 760px;
   background-color: var(--clr-blue);
 }
 
