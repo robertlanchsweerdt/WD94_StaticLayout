@@ -14,6 +14,7 @@
 </head>
 
 <body>
+
     <header>
 
         <div class="header__wrapper">
@@ -99,15 +100,19 @@
 
             <div class="header__logo">
 
-                <img src="./assets/sw_logo.png" alt="star wars logo">
+                <a href="./">
+
+                    <img src="./assets/sw_logo.png" alt="star wars logo">
+
+                </a>
 
             </div>
 
             <div class="header__search-login">
 
-                <span id="search-btn">
+                <input type="text" placeholder="Search Star Wars">
 
-                    <input type="text" placeholder="Search Star Wars">
+                <span id="search-btn" class="non-functional-btn">
 
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                         viewBox="0 0 20 20" version="1.1">
@@ -121,11 +126,11 @@
 
                 <div class="login-wrapper">
 
-                    <a href="#" id="login">LOG IN</a>
+                    <a href="#" id="login" class='non-functional-btn'>LOG IN</a>
 
                     <span>/ /</span>
 
-                    <a href="#" id="sign-up">SIGN UP</a>
+                    <a href="#" id="sign-up" class='non-functional-btn'>SIGN UP</a>
 
                 </div>
 
@@ -140,25 +145,25 @@
                 <li class="blank"></li>
 
                 <li class="menu-item">
-                    <a href="#" class="menu-name">news + blog</a>
+                    <a href="./page.html" class="menu-name">news + blog</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="menu-name">video</a>
+                    <a href="./page.html" class="menu-name">video</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="menu-name">films</a>
+                    <a href="./page.html" class="menu-name">films</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="menu-name">series</a>
+                    <a href="./page.html" class="menu-name">series</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="menu-name">interactive</a>
+                    <a href="./page.html" class="menu-name">interactive</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="menu-name">community</a>
+                    <a href="./page.html" class="menu-name">community</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="menu-name">databank</a>
+                    <a href="./page.html" class="menu-name">databank</a>
                 </li>
 
                 <li class="blank"></li>
@@ -216,8 +221,7 @@
                         class="btn" id="btn-red" target="_blank" rel="noopener">STREAM NOW</a>
 
 
-                    <a href="https://www.starwars.com/series/the-bad-batch/reunion-episode-guide" class="btn"
-                        id="btn-clear" target="_blank" rel="noopener">EPISODE GUIDE</a>
+                    <a href="./page.html" class="btn" id="btn-clear" target="_blank" rel="noopener">EPISODE GUIDE</a>
 
                 </div>
 
@@ -226,19 +230,23 @@
             <ul class="hero__slider-navigation-list">
 
                 <li class="slider-nav" id="slider-nav-1">
-                    <a href="#" class="slider-nav-link">star wars: the bad batch: "reunion"</a>
+                    <!-- href attribute deliberately removed because this  button does not cycle the carousel -->
+                    <a class="slider-nav-link">star wars: the bad batch: "reunion"</a>
                 </li>
 
                 <li class="slider-nav" id="slider-nav-2">
-                    <a href="#" class="slider-nav-link">explore star wars: visions at anime expo lite</a>
+                    <!-- href attribute deliberately removed because this  button does not cycle the carousel -->
+                    <a class="slider-nav-link">explore star wars: visions at anime expo lite</a>
                 </li>
 
                 <li class="slider-nav" id="slider-nav-3">
-                    <a href="#" class="slider-nav-link">which star wars dad are you?</a>
+                    <!-- href attribute deliberately removed because this  button does not cycle the carousel -->
+                    <a class="slider-nav-link">which star wars dad are you?</a>
                 </li>
 
                 <li class="slider-nav" id="slider-nav-4">
-                    <a href="#" class="slider-nav-link">this week in star wars</a>
+                    <!-- href attribute deliberately removed because this  button does not cycle the carousel -->
+                    <a class="slider-nav-link">this week in star wars</a>
                 </li>
 
             </ul>
@@ -272,8 +280,7 @@
                                 class="btn" id="btn-orange" target="_blank" rel="noopener">STREAM NOW</a>
 
 
-                            <a href="https://www.starwars.com/series/star-wars-the-bad-batch" class="btn" id="btn-clear"
-                                target="_blank" rel="noopener">EXPLORE</a>
+                            <a href="./page.html" class="btn" id="btn-clear" target="_blank" rel="noopener">EXPLORE</a>
 
                         </div>
 
@@ -289,7 +296,7 @@
 
                 <div class="inner-grid bad-batch__grid">
 
-                    <div class="card-horizontal">
+                    <a href="./page.html" class="card-horizontal" target="_blank">
 
                         <div class="card__img-wrapper">
 
@@ -315,9 +322,9 @@
 
                         </div>
 
-                    </div>
+                    </a>
 
-                    <div class="card-horizontal">
+                    <a href="./page.html" class="card-horizontal" target="_blank">
 
                         <div class="card__img-wrapper">
 
@@ -343,15 +350,19 @@
 
                         </div>
 
-                    </div>
+                    </a>
 
                     <div class="card-box">
 
                         <div class="video-wrapper">
 
-                            <img src="./assets/thumbnail_bad_batch_bottom_left.jpeg" alt="">
+                            <a href="./page.html" target="_blank">
 
-                            <a href="#" class="btn-video"></a>
+                                <img src="./assets/thumbnail_bad_batch_bottom_left.jpeg" alt="">
+
+                            </a>
+
+                            <button class="btn-video"></button>
 
                         </div>
 
@@ -359,18 +370,20 @@
 
                             <div class="card-inner">
 
-                                <div class="card__highlight-icon"></div>
+                                <a href="./page.html" target="_blank">
 
-                                <h3>
-                                    The Bounty Hunter - Star Wars: The Bad Batch
-                                </h3>
+                                    <h3>
+                                        The Bounty Hunter - Star Wars: The Bad Batch
+                                    </h3>
 
-                                <p>
-                                    See Fennec Shand in episode four of Star Wars: The Bad Batch, now streaming on
-                                    Disney+.
-                                </p>
+                                    <p>
+                                        See Fennec Shand in episode four of Star Wars: The Bad Batch, now streaming on
+                                        Disney+.
+                                    </p>
 
                             </div>
+
+                            </a>
 
                             <div class="card-bottom"></div>
 
@@ -378,13 +391,18 @@
 
                     </div>
 
+
                     <div class="card-box">
 
                         <div class="video-wrapper">
 
-                            <img src="./assets/thumbnail_bad_batch_bottom_right.webp" alt="">
+                            <a href="./page.html" target="_blank">
 
-                            <a href="#" class="btn-video"></a>
+                                <img src="./assets/thumbnail_bad_batch_bottom_right.webp" alt="">
+
+                            </a>
+
+                            <button class="btn-video"></button>
 
                         </div>
 
@@ -392,17 +410,22 @@
 
                             <div class="card-inner">
 
-                                <div class="card__highlight-icon"></div>
+                                <a href="./page.html" target="_blank">
 
-                                <h3>
-                                    For Hire - Star Wars: The Bad Batch
-                                </h3>
+                                    <div class="card__highlight-icon"></div>
 
-                                <p>
-                                    "It's not safe for us anymore." Star Wars: The Bad Batch, now streaming on Disney+.
-                                </p>
+                                    <h3>
+                                        For Hire - Star Wars: The Bad Batch
+                                    </h3>
+
+                                    <p>
+                                        "It's not safe for us anymore." Star Wars: The Bad Batch, now streaming on
+                                        Disney+.
+                                    </p>
 
                             </div>
+
+                            </a>
 
                             <div class="card-bottom"></div>
 
@@ -456,7 +479,7 @@
 
                 <div class="inner-grid bad-batch__grid">
 
-                    <div class="card-horizontal">
+                    <a href="./page.html" class="card-horizontal" target="_blank">
 
                         <div class="card__img-wrapper">
 
@@ -480,9 +503,9 @@
 
                         </div>
 
-                    </div>
+                    </a>
 
-                    <div class="card-horizontal">
+                    <a href="./page.html" class="card-horizontal" target="_blank">
 
                         <div class="card__img-wrapper">
 
@@ -506,15 +529,19 @@
 
                         </div>
 
-                    </div>
+                    </a>
 
                     <div class="card-box">
 
                         <div class="video-wrapper">
 
-                            <img src="./assets/high_republic_bottom_left.webp" alt="">
+                            <a href="./page.html" target="_blank">
 
-                            <a href="#" class="btn-video"></a>
+                                <img src="./assets/high_republic_bottom_left.webp" alt="">
+
+                            </a>
+
+                            <button class="btn-video"></button>
 
                         </div>
 
@@ -522,19 +549,25 @@
 
                             <div class="card-inner">
 
-                                <h3>
-                                    New High Republic Comic Revealed, Lightsabers from the Prime of the Jedi, and More!
-                                </h3>
+                                <a href="./page.html" target="_blank">
 
-                                <p>
-                                    In this installment of the Star Wars: The High Republic Show, we have the first
-                                    details of a new High Republic comic from Marvel (along with more fun reveals)!
-                                    Plus, Krystina goes inside the making of High Republic comics with Lucasfilm's Rob
-                                    Simpson, writer Cavan Scott, and artist Ario Anindito, we take a deep dive into
-                                    lightsabers of the High Republic era, and more!
-                                </p>
+                                    <h3>
+                                        New High Republic Comic Revealed, Lightsabers from the Prime of the Jedi, and
+                                        More!
+                                    </h3>
+
+                                    <p>
+                                        In this installment of the Star Wars: The High Republic Show, we have the first
+                                        details of a new High Republic comic from Marvel (along with more fun reveals)!
+                                        Plus, Krystina goes inside the making of High Republic comics with Lucasfilm's
+                                        Rob
+                                        Simpson, writer Cavan Scott, and artist Ario Anindito, we take a deep dive into
+                                        lightsabers of the High Republic era, and more!
+                                    </p>
 
                             </div>
+
+                            </a>
 
                             <div class="card-bottom"></div>
 
@@ -546,9 +579,13 @@
 
                         <div class="video-wrapper">
 
-                            <img src="./assets/high_republic_bottom_right.jpeg" alt="">
+                            <a href="./page.html" target="_blank">
 
-                            <a href="#" class="btn-video"></a>
+                                <img src="./assets/high_republic_bottom_right.jpeg" alt="">
+
+                            </a>
+
+                            <button class="btn-video"></button>
 
                         </div>
 
@@ -556,16 +593,20 @@
 
                             <div class="card-inner">
 
-                                <h3>
-                                    Ty Yorrick | Characters of Star Wars: The High Republic
-                                </h3>
+                                <a href="./page.html" target="_blank">
 
-                                <p>
-                                    Ty Yorrick is an independent monster hunter of the High Republic era, using the
-                                    skills she honed in her past to pave her way in the galaxy.
-                                </p>
+                                    <h3>
+                                        Ty Yorrick | Characters of Star Wars: The High Republic
+                                    </h3>
+
+                                    <p>
+                                        Ty Yorrick is an independent monster hunter of the High Republic era, using the
+                                        skills she honed in her past to pave her way in the galaxy.
+                                    </p>
 
                             </div>
+
+                            </a>
 
                             <div class="card-bottom"></div>
 
@@ -589,6 +630,15 @@
 
         </section>
 
+    </div>
+
+    <div id='slider-message'>
+        <div class="slider-message__inner">
+            <div class="btn-close">❌</div>
+            <p>
+                Sorry, the feature you selected is not functional for this page
+            </p>
+        </div>
     </div>
 
 </body>

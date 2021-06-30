@@ -85,12 +85,6 @@ p {
   padding: 0 1rem;
 }
 
-a {
-  line-height: 1.2em;
-  letter-spacing: 0.8px;
-  color: var(--clr-white);
-}
-
 ul {
   margin: 0;
   padding: 0;
@@ -103,6 +97,14 @@ li {
 a {
   text-decoration: none;
   text-transform: uppercase;
+  line-height: 1.2em;
+  letter-spacing: 0.8px;
+  color: var(--clr-white);
+}
+
+.card-box a,
+a.card-horizontal {
+  text-transform: initial;
 }
 
 header {
@@ -134,7 +136,7 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 .page-section {
@@ -185,15 +187,12 @@ header {
   margin: 0 auto;
 }
 
+/* CARDS  */
+
 .card-horizontal {
   display: flex;
   width: 512px;
   height: 150px;
-}
-
-.card-horizontal,
-.card-box {
-  cursor: pointer;
 }
 
 .card-horizontal:hover > div img {
@@ -309,6 +308,9 @@ header {
 
 .card-box {
   position: relative;
+
+  text-transform: initial;
+  z-index: 1;
 }
 
 .card-box .card-bottom::before {
@@ -424,6 +426,8 @@ BUTTONS
   opacity: 0.9;
 }
 
+/* CAROUSEL SLIDER BUTTON */
+
 .slide-left,
 .slide-right {
   position: absolute;
@@ -431,6 +435,13 @@ BUTTONS
 
   width: 40px;
   height: 40px;
+
+  cursor: pointer;
+}
+
+.slide-left:hover svg,
+.slide-right:hover svg {
+  background-color: var(--clr-gray-700);
 }
 
 .slide-left svg,
@@ -821,4 +832,78 @@ SECTION:  HIGH REPUBLIC SECTION
 
 #section__high-republic .card-box .card-wrapper {
   height: 240px;
+}
+
+/**
+
+SECTION:  CAROUSEL MESSAGE
+
+*/
+
+#slider-message {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--clr-gray-900);
+  z-index: 200;
+}
+
+#slider-message.active {
+  display: flex;
+}
+
+.slider-message__inner {
+  position: relative;
+
+  width: 500px;
+  padding: 2em 3em;
+
+  border-radius: 5px;
+
+  background-color: var(--clr-black-700);
+  color: var(--clr-gray-300);
+}
+
+#slider-message p {
+  font-size: 1.4rem;
+  letter-spacing: 1.2;
+  line-height: 1.3;
+
+  width: 95%;
+  text-align: justify;
+}
+
+#slider-message .btn-close {
+  position: absolute;
+  top: 12%;
+  right: 3%;
+
+  cursor: pointer;
+}
+
+/**
+
+PAGE:  BLANK PAGE
+
+*/
+
+#blank-page .page-wrapper {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+
+  height: 70vh;
+
+  background-color: var(--clr-gray-600);
+}
+
+#blank-page p {
+  font-size: 1rem;
 }
