@@ -676,11 +676,12 @@ SECTION:  HERO
 }
 
 #hero .title-block {
+  width: min(400px, 100%);
   align-self: flex-end;
 }
 
 .hero__title-wrapper img {
-  width: min(400px, 100%);
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -906,4 +907,48 @@ PAGE:  BLANK PAGE
 
 #blank-page p {
   font-size: 1rem;
+}
+
+/**
+
+MEDIA QUERYY MESSAGE
+
+*/
+
+#media-query-message {
+  display: none;
+  height: 100vh;
+  width: 100%;
+}
+
+#media-query-inner {
+  display: grid;
+  place-content: center;
+
+  height: 100%;
+}
+
+#media-query-inner p {
+  margin-bottom: 1em;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/**
+
+MEDIA QUERY
+
+*/
+
+@media (max-width: 1200px) {
+  header,
+  .copy-message,
+  #hero,
+  .page-wrapper {
+    display: none;
+  }
+
+  #media-query-message {
+    display: grid;
+  }
 }
