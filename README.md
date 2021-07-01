@@ -2,7 +2,7 @@
 
 This is an assignment by [Eleven Fifty Academy](https://elevenfifty.org/) related to earning the Gold Badge.
 
-This assignment is titled Static Layout.
+This assignment is titled Static Layout, and intended to demonstrate skill-set using HTML5 and CSS.
 
 ## Instructions
 
