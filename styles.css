@@ -898,15 +898,27 @@ PAGE:  BLANK PAGE
 #blank-page .page-wrapper {
   display: grid;
   place-content: center;
-  justify-items: center;
 
-  height: 70vh;
+  height: 80vh;
 
   background-color: var(--clr-gray-600);
 }
 
+#blank-page .page-wrapper__inner {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#blank-page h1 {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
 #blank-page p {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+  line-height: 1.2;
+  letter-spacing: 1.5px;
 }
 
 /**
@@ -944,7 +956,8 @@ MEDIA QUERY
   header,
   .copy-message,
   #hero,
-  .page-wrapper {
+  .page-wrapper,
+  #blank-page .page-wrapper {
     display: none;
   }
 

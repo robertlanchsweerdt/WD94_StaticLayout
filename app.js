@@ -4,7 +4,7 @@ const btnVideo = document.querySelectorAll('.btn-video');
 const btnCarousel = document.querySelectorAll('.slider-nav');
 const btnNotFunctional = document.querySelectorAll('.non-functional-btn');
 
-const sliderMessage = document.getElementById('features-message');
+const featureMessage = document.getElementById('features-message');
 const btnClose = document.querySelector('.btn-close');
 
 const listenerArray = [
@@ -18,17 +18,17 @@ const listenerArray = [
 listenerArray.forEach((listener) => {
   if (listener != null) {
     listener.forEach((btn) => {
-      btn.addEventListener('click', featuresMessage);
+      btn.addEventListener('click', displayMessage);
     });
   }
 });
 
 btnClose.addEventListener('click', closeMessage);
 
-function featuresMessage() {
-  sliderMessage.classList.add('active');
+function displayMessage() {
+  featureMessage.classList.add('active');
 }
 
 function closeMessage() {
-  sliderMessage.classList.remove('active');
+  featureMessage.classList.remove('active');
 }
