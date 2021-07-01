@@ -841,7 +841,7 @@ SECTION:  CAROUSEL MESSAGE
 
 */
 
-#slider-message {
+#features-message {
   position: fixed;
   top: 0;
   right: 0;
@@ -856,11 +856,11 @@ SECTION:  CAROUSEL MESSAGE
   z-index: 200;
 }
 
-#slider-message.active {
+#features-message.active {
   display: flex;
 }
 
-.slider-message__inner {
+.features-message__inner {
   position: relative;
 
   width: 500px;
@@ -872,7 +872,7 @@ SECTION:  CAROUSEL MESSAGE
   color: var(--clr-gray-300);
 }
 
-#slider-message p {
+#features-message p {
   font-size: 1.4rem;
   letter-spacing: 1.2;
   line-height: 1.3;
@@ -881,7 +881,7 @@ SECTION:  CAROUSEL MESSAGE
   text-align: justify;
 }
 
-#slider-message .btn-close {
+#features-message .btn-close {
   position: absolute;
   top: 12%;
   right: 3%;
