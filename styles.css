@@ -218,7 +218,8 @@ header {
   overflow: hidden;
 }
 
-.card-wrapper {
+.card-wrapper,
+.card-wrapper a {
   flex: 1;
 }
 
