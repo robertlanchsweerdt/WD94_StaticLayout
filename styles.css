@@ -920,7 +920,7 @@ PAGE:  BLANK PAGE
   margin-bottom: 2em;
 }
 
-#blank-page p {
+#blank-page .page-wrapper__inner p {
   font-size: 1.2rem;
   margin-bottom: 1em;
   line-height: 1.2;
